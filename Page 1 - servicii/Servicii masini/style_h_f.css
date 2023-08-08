@@ -1,0 +1,55 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    header .logo {
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+    footer .button2 {
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+    a:hover {
+        background: #fff;
+        color: #050801;
+        box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 200px #fff;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    }

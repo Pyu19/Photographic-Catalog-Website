@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    header .logo {
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+    .toggle.active {
+        background: url(https://i.ibb.co/rt3HybH/close.png);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: center;
+        cursor: pointer;
+    }
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+    .showcase.active {
+        right: 300px;
+    }
+
+    .showcase img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .menu ul {
+        position: relative;
+    }
+
+        .menu ul li {
+            list-style: none;
+        }
+
+            .menu ul li a {
+                text-decoration: none;
+                font-size: 24px;
+                color: #111;
+            }
+
+                .menu ul li a:hover {
+                    color: #03a9f4;
+                }
+
+    .menu a.current,
+    .menu a:hover {
+        color: #03a9f4;
+    }
+
+@media (max-width: 991px) {
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+    .text h2 {
+        font-size: 3em;
+    }
+
+    .text h3 {
+        font-size: 2em;
+    }
+}
+
+.contact-parent {
+    background: #fff;
+    display: flex;
+    margin: 80px 0;
+}
+
+.contact-child {
+    display: flex;
+    flex: 1;
+    box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+}
+
+.child1 {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./da.webp');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    padding: 100px 0;
+}
+
+    .child1 p {
+        padding-left: 20%;
+        font-size: 20px;
+        text-shadow: 0px 0px 2px #000;
+    }
+
+        .child1 p span {
+            font-size: 16px;
+            color: #9df2fd;
+        }
+
+.child2 {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inside-contact {
+    width: 90%;
+    margin: 0 auto;
+}
+
+    .inside-contact h2 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .inside-contact h3 {
+        text-align: center;
+        font-size: 16px;
+        color: #0085e2;
+    }
+
+    .inside-contact input, .inside-contact textarea {
+        width: 100%;
+        background-color: #eee;
+        border: 1px solid rgba(0,0,0,0.48);
+        padding: 5px 10px;
+        margin-bottom: 20px;
+    }
+
+        .inside-contact input[type=submit] {
+            background-color: #000;
+            color: #fff;
+            transition: 0.2s;
+            border: 2px solid #000;
+            margin: 30px 0;
+        }
+
+            .inside-contact input[type=submit]:hover {
+                background-color: #fff;
+                color: #000;
+                transition: 0.2s;
+            }
+
+@media screen and (max-width:991px) {
+    .contact-parent {
+        display: block;
+        width: 100%;
+    }
+
+    .child1 {
+        display: none;
+    }
+
+    .child2 {
+        background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("https://cdn.pixabay.com/photo/2019/06/28/00/17/architecture-4303279_1280.jpg");
+        background-size: cover;
+    }
+
+    .inside-contact input, .inside-contact textarea {
+        background-color: #fff;
+    }
+}
+
+.container {
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
